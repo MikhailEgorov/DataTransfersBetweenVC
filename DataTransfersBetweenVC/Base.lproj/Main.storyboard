@@ -1,24 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T1T-27-l0I">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scene A-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="DataTransfersBetweenVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seg-wa-dGU">
+                                <rect key="frame" x="16" y="155" width="361" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtJ-NJ-llv">
+                                <rect key="frame" x="30" y="244" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change with property">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8W-pb-9de"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoL-1H-K2V">
+                                <rect key="frame" x="30" y="312" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change with segue">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="9Ph-GP-ytO" kind="show" identifier="toEditScreen" id="9hQ-AI-9TS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hO-uj-U7r">
+                                <rect key="frame" x="30" y="380" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change with delegate">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editDataWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQ1-Hm-3Cd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAY-9X-Hsb">
+                                <rect key="frame" x="30" y="448" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change with closure">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editDataWithClosure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d7l-el-F7y"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="1hO-uj-U7r" firstAttribute="top" secondItem="UoL-1H-K2V" secondAttribute="bottom" constant="30" id="4nd-jo-rAS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Seg-wa-dGU" secondAttribute="trailing" constant="16" id="IaQ-xX-nEE"/>
+                            <constraint firstItem="1hO-uj-U7r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Kbp-Vn-ldP"/>
+                            <constraint firstItem="WtJ-NJ-llv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="R4o-ET-e3W"/>
+                            <constraint firstItem="UoL-1H-K2V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Rdb-dr-p3C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAY-9X-Hsb" secondAttribute="trailing" constant="30" id="S7H-Tr-4Lj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WtJ-NJ-llv" secondAttribute="trailing" constant="30" id="UWd-Ua-2mw"/>
+                            <constraint firstItem="WtJ-NJ-llv" firstAttribute="top" secondItem="Seg-wa-dGU" secondAttribute="bottom" constant="35" id="ZsW-P9-EpK"/>
+                            <constraint firstItem="yAY-9X-Hsb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="eCB-OO-n19"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UoL-1H-K2V" secondAttribute="trailing" constant="30" id="fcT-dg-41b"/>
+                            <constraint firstItem="UoL-1H-K2V" firstAttribute="top" secondItem="WtJ-NJ-llv" secondAttribute="bottom" constant="30" id="kcE-cF-BLU"/>
+                            <constraint firstItem="yAY-9X-Hsb" firstAttribute="top" secondItem="1hO-uj-U7r" secondAttribute="bottom" constant="30" id="sat-43-9Mo"/>
+                            <constraint firstItem="Seg-wa-dGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ush-bt-2mc"/>
+                            <constraint firstItem="Seg-wa-dGU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xTv-GW-TfI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1hO-uj-U7r" secondAttribute="trailing" constant="30" id="zNi-cZ-8Ap"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Scene A" largeTitleDisplayMode="always" id="tuG-Yx-dcA"/>
+                    <connections>
+                        <outlet property="dataLabel" destination="Seg-wa-dGU" id="Auu-44-9tV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="956.48854961832058" y="-17.605633802816904"/>
+        </scene>
+        <!--Scene B-->
+        <scene sceneID="Zjo-f8-YnC">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="9Ph-GP-ytO" customClass="SecondViewController" customModule="DataTransfersBetweenVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MVn-DA-Fz6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bec-nO-zyP">
+                                <rect key="frame" x="16" y="301" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47G-BF-7bH">
+                                <rect key="frame" x="30" y="365" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save with property">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveDataWithProperty:" destination="9Ph-GP-ytO" eventType="touchUpInside" id="maI-uN-yfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cch-pE-V7h">
+                                <rect key="frame" x="30" y="433" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save with unwind">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Bgx-w6-4na" kind="unwind" identifier="toFirstScreen" unwindAction="unwindToFirstScreen:" id="tff-3m-POi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-YJ-LXU">
+                                <rect key="frame" x="30" y="501" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save with delegate">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveDataWithDelegate:" destination="9Ph-GP-ytO" eventType="touchUpInside" id="8ff-Gu-3iF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LY-Rr-wC2">
+                                <rect key="frame" x="30" y="569" width="333" height="38"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" red="0.96505898239999999" green="0.95933181050000005" blue="0.93034750219999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save with closure">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveDataWithClosure:" destination="9Ph-GP-ytO" eventType="touchUpInside" id="9sW-e7-LtY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YQy-Sn-O65"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="YQy-Sn-O65" firstAttribute="trailing" secondItem="9LY-Rr-wC2" secondAttribute="trailing" constant="30" id="0EQ-I2-dzW"/>
+                            <constraint firstItem="Cch-pE-V7h" firstAttribute="leading" secondItem="YQy-Sn-O65" secondAttribute="leading" constant="30" id="0j2-z2-ybv"/>
+                            <constraint firstItem="YQy-Sn-O65" firstAttribute="trailing" secondItem="Cch-pE-V7h" secondAttribute="trailing" constant="30" id="2T2-Qc-FEN"/>
+                            <constraint firstItem="YQy-Sn-O65" firstAttribute="trailing" secondItem="47G-BF-7bH" secondAttribute="trailing" constant="30" id="9J7-5C-Kht"/>
+                            <constraint firstItem="Cch-pE-V7h" firstAttribute="top" secondItem="47G-BF-7bH" secondAttribute="bottom" constant="30" id="I2G-BY-7Gf"/>
+                            <constraint firstItem="47G-BF-7bH" firstAttribute="top" secondItem="Bec-nO-zyP" secondAttribute="bottom" constant="30" id="LBd-Am-PjY"/>
+                            <constraint firstItem="mWA-YJ-LXU" firstAttribute="leading" secondItem="YQy-Sn-O65" secondAttribute="leading" constant="30" id="LHj-Pq-WYh"/>
+                            <constraint firstItem="Bec-nO-zyP" firstAttribute="leading" secondItem="YQy-Sn-O65" secondAttribute="leading" constant="16" id="OPk-2r-EzQ"/>
+                            <constraint firstItem="YQy-Sn-O65" firstAttribute="trailing" secondItem="mWA-YJ-LXU" secondAttribute="trailing" constant="30" id="RZj-jm-mdk"/>
+                            <constraint firstItem="YQy-Sn-O65" firstAttribute="trailing" secondItem="Bec-nO-zyP" secondAttribute="trailing" constant="16" id="UAu-J2-Zul"/>
+                            <constraint firstItem="mWA-YJ-LXU" firstAttribute="top" secondItem="Cch-pE-V7h" secondAttribute="bottom" constant="30" id="ZHI-Ue-GIe"/>
+                            <constraint firstItem="9LY-Rr-wC2" firstAttribute="top" secondItem="mWA-YJ-LXU" secondAttribute="bottom" constant="30" id="bYi-Ue-8DD"/>
+                            <constraint firstItem="9LY-Rr-wC2" firstAttribute="leading" secondItem="YQy-Sn-O65" secondAttribute="leading" constant="30" id="ibh-aR-Kv7"/>
+                            <constraint firstItem="47G-BF-7bH" firstAttribute="leading" secondItem="YQy-Sn-O65" secondAttribute="leading" constant="30" id="kiM-7O-fGs"/>
+                            <constraint firstItem="Bec-nO-zyP" firstAttribute="top" secondItem="YQy-Sn-O65" secondAttribute="top" constant="146" id="mSm-Ix-WUr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scene B" id="OP8-bI-2X6"/>
+                    <connections>
+                        <outlet property="dataTextField" destination="Bec-nO-zyP" id="HKG-hO-Yhl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAH-NO-C0s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Bgx-w6-4na" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1876" y="-18"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bva-KQ-5mp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T1T-27-l0I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="kH5-Nc-7VP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zSf-nn-a53"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWy-le-mhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.770992366412212" y="-17.605633802816904"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
